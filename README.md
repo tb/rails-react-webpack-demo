@@ -1,24 +1,28 @@
-# README
+# rails-react-webpack-demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Replace assets pipeline and [rails-react](https://github.com/reactjs/react-rails) with webpack
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+* node ([nvm](https://github.com/creationix/nvm) recommended)
 
-* System dependencies
+## Install
 
-* Configuration
+    bundle
+    cd frontend
+    npm i
 
-* Database creation
+## Starting
+    
+    rails s
+    cd frontend
+    npm start
+    open http://localhost:3000
 
-* Database initialization
+## Deployment to heroku
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    heroku buildpacks:clear
+    heroku buildpacks:set heroku/nodejs
+    heroku buildpacks:add heroku/ruby --index 2
+    git push heroku master
+    open https://rails-react-webpack-demo.herokuapp.com

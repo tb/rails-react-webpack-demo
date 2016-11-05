@@ -1,3 +1,7 @@
+import React from 'react';
+
+import './Message.scss';
+
 class Message extends React.Component {
   render () {
     return (
@@ -10,4 +14,8 @@ class Message extends React.Component {
 
 Message.propTypes = {
   text: React.PropTypes.string
+};
+
+export {
+  Message,
 };
